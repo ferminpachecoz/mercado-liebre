@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <div class="logo"> 
+                <a href="/">
+                <img src="images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
+                </a>
+            </div>
+
+            <form action="" method="">
+                <input type="search" placeholder="Buscar productos, marcas y más" name="searchBar" class="searchBar"><button type="submit"><i class="fas fa-search lupa"></i></button>
+            </form>
+            
+            <h2><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</h2>
+            
+            
+        </div>
+        
+        <nav class="bottom-header">
+            <ul class="primerNav">
+                <li><a href="#">Ofertas|</a></li>
+                <li><a href="#">Tiendas Oficiales|</a></li>
+                <li><a href="#">Vender|</a></li>
+                <li><a href="#">Ayuda|</a></li>
+            </ul>
+            <ul class="segundoNav">
+                <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+                <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
+            </ul>
+        </nav>
+        
+        <div class="burger-menu">
+            <i class="fa fa-bars burger"></i>
+        </div>
+    </header>
+    <form action="" method="GET" class="formularioRegistro">
+        <div>
+        <label for="">Ingrese su nombre y apellido:</label>
+        <input type="text" name="nombreApellido" class="controlador" minlength="3" required>
+        </div>
+
+        <div>
+        <label for="">Ingrese su nombre de usuario:</label>
+        <input type="text" name="nombreUsuario" class="controlador" minlength="3" required>
+        </div>
+
+        <div>
+        <label for="">Fecha de Nacimiento:</label>
+        <input type="date" name="fechaNacimiento" class="controlador" required>
+        </div>
+
+        <div>
+        <label for="">Domicilio:</label>
+        <input type="text" name="domicilio" class="controlador" minlength="3" required>
+        </div>
+
+        <div>
+        <label for="">Desea Comprar o Vender:</label>
+        <label for="">Comprar:</label><input type="radio" name="medio" value="Comprar" class="controlador" required>
+        <label for="">Vender:</label><input type="radio" name="medio" value="Vender" class="controlador" required>
+        </div>
+
+        <div>
+            <label for="">Categoria de Interés:</label>
+            <select name="Categoria" id="" class="selectorRegister" required>
+                <option value="cat1">Electro</option>
+                <option value="cat2">Moda</option>
+                <option value="cat3">Hogar</option>
+                <option value="cat4">Juguetería</option>
+                <option value="cat5">Vida sana</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">Foto de Usuario:</label>
+            <input type="file" accept=".jpg" class="controlador" required>
+        </div>
+        
+        <div>
+            <label for="">Contraseña:</label>
+            <input type="password" name="password" class="controlador" minlength="3" required>
+        </div>
+
+        <div>
+            <label for="">Confirmar Contraseña:</label>
+            <input type="password" name="password" class="controlador" minlength="3" required>
+        </div>
+
+        <div class="botonRegister">
+        <button type="reset">Borrar</button>
+        <button type="submit">Enviar</button>
+        </div>
+
+    </form>
+</body>
+</html>

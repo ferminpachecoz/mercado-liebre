@@ -1,0 +1,370 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 12px;
+}
+
+header{
+    background-color: #EAC926;
+    padding: 10px;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+}
+
+header div.logo{
+    width: 50%;
+    animation: aumentar 1s linear infinite alternate;
+}
+@keyframes aumentar {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+header div.logo{
+    padding: 10px;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+header .form .submit{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    width: 10%;
+}
+
+
+
+div.burger-menu{
+    text-align: center;
+}
+
+div.burger-menu i{
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.price{
+    font-size: 18px;
+    width: 30%;
+    margin-left: 15px;
+    
+}
+.discount{
+    width: 60%;
+    align-self: flex-start;
+}
+.description{
+    margin: 15px 0px 25px 15px;
+}
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: #666;
+}
+
+section.banner img{
+    width: 100%;
+    margin-top: 200px;
+}
+
+main{
+    width: 90%;
+    margin: 5vw;
+}
+
+main section article{
+    background-color: #fff;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.445);
+    position: relative;
+    z-index: 1;
+}
+
+main section article img{
+    width: 100%;
+    position: relative;
+}
+
+
+.cafeteraP{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.contenedorImg:hover .cafeteraP{
+    opacity: 1;
+}
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+    }
+.fas.fa-truck:hover{
+    transform: rotateZ(270deg);
+}
+.fas.fa-truck{
+    transition: all 0.5s;
+}
+main section article i,
+.discount{
+    color: #39b54a;
+}
+
+.product_img{
+    display: block;
+    width: 60vw;
+    margin: 15px auto;    
+}
+
+.searchBar{
+    width: 70%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 15px;
+    font-size: 12px;
+    border-right: none;
+}
+header div form{
+    width: 50%;
+}
+.fas.fa-search.lupa{
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.top-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+header div h2{
+    font-size: 14px;
+    margin: 5px auto;
+}
+.bottom-header{
+    display: none;
+}
+@media (min-width: 768px){
+    .top-header{
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    header div h2{
+        width: 40vw;
+        font-size: 13px;
+    }
+    .searchBar{
+        width: 25vw;
+        padding: 5px;
+    }
+    header div.logo{
+        width: 35vw;
+    }
+    .fas.fa-search.lupa{
+        padding: 5px;
+    }
+    .bottom-header{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .bottom-header ul{
+        display: flex;
+        font-size: 15px;
+    }
+    .bottom-header ul li{
+        margin: 10px;
+    }
+    .burger-menu{
+        display: none;
+    }
+    main section div.products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    main section div article{
+        width: 40vw;
+        margin-bottom: 5vw;
+    }
+    .product_img{
+        width: 40vw;
+    }
+}
+@media (min-width: 1200px){
+    main section div article{
+        width: 20vw;
+        margin-bottom: 5vw;
+    }
+    .product_img{
+        width: 20vw;
+    }
+}
+
+/* Formulario de Registro */
+.formularioRegistro{
+    padding: 20px 10px;
+    background-color: rgb(201, 195, 195);
+    border-radius: 5px;
+    margin-top: 200px;
+}
+body form.formularioRegistro div{
+    margin: 20px;
+    width: 90%;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+}
+.formularioRegistro button{
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color: lime;
+    border-radius: 5px;
+    border: none;
+    transition: all 450ms;
+}
+.formularioRegistro button:hover{
+    background-color: darkgreen;
+}
+.formularioRegistro div label{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.controlador{
+    font-size: 16px;
+    padding: 5px;
+    width: 90%;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px
+}
+.selectorRegister{
+    font-size: 16px;
+    padding: 5px;
+    width: 90%;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px
+}
+.botonRegister{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Formulario de Login */
+.formularioLogin{
+    background-color: rgb(201, 195, 195);
+    border-radius: 5px;
+    padding: 10px;
+    width: 100vw;
+    margin-top: 200px;
+}
+.formularioLogin label{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.formularioLogin input{
+    font-size: 16px;
+    padding: 5px;
+    width: 90%;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.formularioLogin a button{
+    font-size: 18px;
+    padding: 5px 10px;
+    border: none;
+    color: #FFF;
+    background-color: rgb(0, 17, 255);
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.botonLogin{
+    display: flex;
+    justify-content: center;
+}
+.formularioLogin a button:hover{
+    background-color: #0022AA;
+    border-radius: 10px;
+}
