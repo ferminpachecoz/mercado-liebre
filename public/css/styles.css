@@ -11,6 +11,7 @@ body{
 
 h3{
     font-size: 24px;
+    margin: 20px 0px;
 }
 
 p{
@@ -41,6 +42,7 @@ header div.logo{
 header div.logo{
     padding: 10px;
 }
+
 
 header ul li{
     list-style-type: none;
@@ -88,6 +90,7 @@ article div.main-article{
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: 10px;
 }
 
 .price{
@@ -97,8 +100,9 @@ article div.main-article{
     
 }
 .discount{
-    width: 60%;
+    width: 55%;
     align-self: flex-start;
+    margin-left: 10px;
 }
 .description{
     margin: 15px 0px 25px 15px;
@@ -214,12 +218,139 @@ header div form{
     justify-content: space-between;
 }
 header div h2{
-    font-size: 14px;
+    font-size: 16px;
     margin: 5px auto;
 }
 .bottom-header{
     display: none;
 }
+.footerC{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footerC div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+footer div p i{
+    color: #1259c3;
+    font-size: 30px;
+    margin: 10px;
+    transition: all 0.5s;
+}
+footer div p i:hover{
+    color: #39b54a;
+}
+.textFooter{
+    width: 80%;
+}
+.copyright{
+    margin-bottom: 15px;
+}
+
+/* Formulario de Registro */
+.formularioRegistro{
+    padding: 20px 10px;
+    background-color: rgb(214, 208, 208);
+    border-radius: 5px;
+    width: 90%;
+    margin: 200px auto;
+}
+body form.formularioRegistro div{
+    margin: 20px;
+    width: 90%;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+}
+.formularioRegistro button{
+    padding: 7px 12px;
+    font-size: 27px;
+    font-weight: bold;
+    color: #FFF;
+    background-color: rgb(0, 17, 255);
+    border-radius: 20px;
+    border: none;
+    transition: all 450ms;
+}
+.formularioRegistro button:hover{
+    background-color: #0022AA;
+}
+.formularioRegistro div label{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.controlador{
+    font-size: 16px;
+    padding: 5px;
+    width: 90%;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px
+}
+.selectorRegister{
+    font-size: 16px;
+    padding: 5px;
+    width: 90%;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px
+}
+.botonRegister{
+    display: flex;
+    justify-content: center;
+}
+
+/* Formulario de Login */
+.formularioLogin{
+    background-color: rgb(201, 195, 195);
+    border-radius: 5px;
+    padding: 20px;
+    width: 90vw;
+    margin: 200px auto;
+}
+.formularioLogin label{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.formularioLogin input{
+    font-size: 16px;
+    padding: 5px;
+    width: 90%;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.formularioLogin a button{
+    padding: 7px 12px;
+    font-size: 27px;
+    font-weight: bold;
+    border: none;
+    color: #FFF;
+    background-color: rgb(0, 17, 255);
+    border-radius: 25px;
+    transition: all 0.5s;
+}
+
+.botonLogin{
+    display: flex;
+    justify-content: center;
+}
+.formularioLogin a button:hover{
+    background-color: #0022AA;
+    border-radius: 10px;
+}
+
+/*Media Querie para Tablet */
+
 @media (min-width: 768px){
     .top-header{
         flex-wrap: nowrap;
@@ -247,7 +378,8 @@ header div h2{
     }
     .bottom-header ul{
         display: flex;
-        font-size: 15px;
+        font-size: 16px;
+        font-weight: bold;
     }
     .bottom-header ul li{
         margin: 10px;
@@ -271,7 +403,19 @@ header div h2{
         right: 7%;
         bottom: 9%;
     }
+    /* Register Querie */
+    .formularioRegistro{
+        width: 80%;
+    }
+
+    /*Login Querie */
+    .formularioLogin{
+        width: 75vw;
+    }
 }
+
+/*Media Querie para Desktop */
+
 @media (min-width: 1200px){
     main section div article{
         width: 20vw;
@@ -280,98 +424,35 @@ header div h2{
     .product_img{
         width: 20vw;
     }
+    .footerC{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .footerC div{
+        width: 30%;
+    }
+    .copyright{
+        margin: 15px auto;
+    }
+    .bottom-header ul{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    header div h2{
+        font-size: 18px;
+    }
+
+    /* Register Querie */
+    .formularioRegistro{
+        width: 70%;
+    }
+
+    /*Login Querie */
+    .formularioLogin{
+        width: 65vw;
+    }
 }
 
-/* Formulario de Registro */
-.formularioRegistro{
-    padding: 20px 10px;
-    background-color: rgb(201, 195, 195);
-    border-radius: 5px;
-    margin-top: 200px;
-}
-body form.formularioRegistro div{
-    margin: 20px;
-    width: 90%;
-    font-size: 18px;
-    font-style: italic;
-    text-align: center;
-}
-.formularioRegistro button{
-    padding: 5px 10px;
-    font-size: 20px;
-    background-color: lime;
-    border-radius: 5px;
-    border: none;
-    transition: all 450ms;
-}
-.formularioRegistro button:hover{
-    background-color: darkgreen;
-}
-.formularioRegistro div label{
-    display: block;
-    font-size: 18px;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-.controlador{
-    font-size: 16px;
-    padding: 5px;
-    width: 90%;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 5px
-}
-.selectorRegister{
-    font-size: 16px;
-    padding: 5px;
-    width: 90%;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 5px
-}
-.botonRegister{
-    display: flex;
-    justify-content: space-around;
-}
 
-/* Formulario de Login */
-.formularioLogin{
-    background-color: rgb(201, 195, 195);
-    border-radius: 5px;
-    padding: 10px;
-    width: 100vw;
-    margin-top: 200px;
-}
-.formularioLogin label{
-    display: block;
-    font-size: 18px;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-.formularioLogin input{
-    font-size: 16px;
-    padding: 5px;
-    width: 90%;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 5px;
-}
 
-.formularioLogin a button{
-    font-size: 18px;
-    padding: 5px 10px;
-    border: none;
-    color: #FFF;
-    background-color: rgb(0, 17, 255);
-    border-radius: 5px;
-    transition: all 0.5s;
-}
-
-.botonLogin{
-    display: flex;
-    justify-content: center;
-}
-.formularioLogin a button:hover{
-    background-color: #0022AA;
-    border-radius: 10px;
-}
